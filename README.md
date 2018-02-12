@@ -21,22 +21,22 @@ public String prettyPrintKeys(): This method returns a multi-line string represe
 When the method is called with an empty tree, it should return the string "-null\n".
 When the method is called with the example tree shown in the picture below, it should return the string:
 
--S
- |-E
- | |-A
- | | |-null
- | |  -C
- | |   |-null
- | |    -null
- |  -R
- |   |-H
- |   | |-null
- |   |  -M
- |   |   |-null
- |   |    -null
- |    -null
-  -X
-   |-null
-    -null
+    -S
+     |-E
+    | |-A
+    | | |-null
+    | |  -C
+    | |   |-null
+    | |    -null
+    |  -R
+    |   |-H
+    |   | |-null
+    |   |  -M
+    |   |   |-null
+    |   |    -null
+    |    -null
+     -X
+      |-null
+      -null
 
 Note that line breaks in a string are represented with the special sequence "\n". You should have a "\n" even after the last key in the tree.
