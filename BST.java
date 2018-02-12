@@ -11,12 +11,8 @@
 import java.util.NoSuchElementException;
 
 public class BST<Key extends Comparable<Key>, Value> {
-//	public String s="";
 	private Node root;             // root of BST
 
-	/**
-	 * Private node class.
-	 */
 	private class Node {
 		private Key key;           // sorted by key
 		private Value val;         // associated data
@@ -55,7 +51,6 @@ public class BST<Key extends Comparable<Key>, Value> {
 
 	/**
 	 *  Search BST for given key.
-	 *  What is the value associated with given key?
 	 *
 	 *  @param key the search key
 	 *  @return value associated with the given key if found, or null if no such key exists.
@@ -105,19 +100,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 	}
 	/**
 	 * Tree height.
-	 *
-	 * Asymptotic worst-case running time using Theta notation: Theta(N)
-	 *
 	 * @return the number of links from the root to the deepest leaf.
-	 *
-	 * Example 1: for an empty tree this should return -1.
-	 * Example 2: for a tree with only one node it should return 0.
-	 * Example 3: for the following tree it should return 2.
-	 *   B
-	 *  / \
-	 * A   C
-	 *      \
-	 *       D
 	 */
 	public int height() {
 		return height(root);
@@ -133,19 +116,6 @@ public class BST<Key extends Comparable<Key>, Value> {
 	 * That is, for each node, the keys in the left subtree should appear before the key in the node.
 	 * Also, for each node, the keys in the right subtree should appear before the key in the node.
 	 * For each subtree, its keys should appear within a parenthesis.
-	 *
-	 * Example 1: Empty tree -- output: "()"
-	 * Example 2: Tree containing only "A" -- output: "(()A())"
-	 * Example 3: Tree:
-	 *   B
-	 *  / \
-	 * A   C
-	 *      \
-	 *       D
-	 *
-	 * output: "((()A())B(()C(()D())))"
-	 *
-	 * output of example in the assignment: (((()A(()C()))E((()H(()M()))R()))S(()X()))
 	 *
 	 * @return a String with all keys in the tree, in order, parenthesized.
 	 */
@@ -179,7 +149,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 	/**
 	 * Median key.
 	 * If the tree has N keys k1 < k2 < k3 < ... < kN, then their median key 
-	 * is the element at position (N+1)/2 (where "/" here is integer division)
+	 * is the element at position (N+1)/2
 	 *
 	 * @return the median key, or null if the tree is empty.
 	 */
@@ -217,7 +187,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 
 
 	/**
-	 * Pretty Printing the tree. Each node is on one line -- see assignment for details.
+	 * Pretty Printing the tree. Each node is on one line -- see README for details.
 	 *
 	 * @return a multi-line string with the pretty ascii picture of the tree.
 	 */
@@ -241,7 +211,6 @@ public class BST<Key extends Comparable<Key>, Value> {
 	}
 	/**
 	 * Deletes a key from a tree (if the key is in the tree).
-	 * Note that this method works symmetrically from the Hibbard deletion:
 	 * If the node to be deleted has two child nodes, then it needs to be
 	 * replaced with its predecessor (not its successor) node.
 	 *
