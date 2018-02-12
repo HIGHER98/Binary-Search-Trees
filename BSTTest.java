@@ -16,7 +16,6 @@ import org.junit.runners.JUnit4;
 @RunWith(JUnit4.class)
 public class BSTTest
 {  
-  /** <p>Test {@link BST#prettyPrintKeys()}.</p> */
       
  @Test
  public void testPrettyPrint() {
@@ -62,8 +61,6 @@ public class BSTTest
      assertEquals("Checking pretty printing of non-empty tree", result, bst.prettyPrintKeys());
      }
 
-  
-     /** <p>Test {@link BST#delete(Comparable)}.</p> */
      @Test
      public void testDelete() {
          BST<Integer, Integer> bst = new BST<Integer, Integer>();
@@ -98,7 +95,6 @@ public class BSTTest
          bst.delete(3);
          assertEquals("Deleting node with two children",
                 "(((()1())2(()4(()5())))7())", bst.printKeysInOrder());
-
      }
      
      @Test
@@ -135,10 +131,8 @@ public class BSTTest
          bst.put(4, 4);   //   2   4
          bst.put(5, 5);   //        \
                           //         5
-         
+       
     	 assertEquals("4", bst.median().toString());
     	 
-     }
-     
-     
+     }  
 }
