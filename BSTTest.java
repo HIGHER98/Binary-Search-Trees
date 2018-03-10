@@ -6,7 +6,7 @@ import org.junit.runners.JUnit4;
 
 //-------------------------------------------------------------------------
 /**
- *  Test class for Doubly Linked List
+ *  Test class for BST.java
  *
  *  @version 3.1 09/11/15 11:32:15
  *
